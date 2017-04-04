@@ -1,8 +1,15 @@
+# What is this?
+
+this is a composerised wordpress with basic plugins and a theme to use wordpress as a CRUD and API only framework without a front-end. So basicly Wordpress as a REST service.
+
+If you don't want a full wordpress with a theme and plugins you can always download the theme seperatly with the functionality here:
+https://github.com/laurensmarcelis/wordpress-api-boilerplate-theme
+
 # Installation
 
 ## run composer
 
-run "composer install" to install wordpress and plugins
+run "composer install" on windows or "php composer.phar" on mac to install wordpress and the plugins
 
 ## create a parameters file
 
@@ -18,11 +25,15 @@ define( 'DB_NAME', 'name_of_database' );
 define( 'DB_USER', 'user_of_database' );
 define( 'DB_PASSWORD', 'password_of_user' );
 define( 'DB_HOST', 'localhost' ); // Probably 'localhost'
-/* IF YOU ARE USING MAMPP OR XAMPP ADD THIS LINE */
+/* IF YOU ARE USING MAMPP OR XAMPP AND NOT USING THIS PROJECT AS WEBROOT? ADD THIS LINE */
 define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/<your_folder>/wp-content' );
 ```
 
-## using xampp or mampp?
+## use 
+
+Create your custom post types, add some fields to them using advanced custom fields. There is an example post type + example post type rest functions to customize your API output with the build in wordpress funtions.
+
+## are you using xampp or mampp and not using the project as webroot?
 replace the following line in your .htaccess
 
 RewriteRule . /index.php [L]
