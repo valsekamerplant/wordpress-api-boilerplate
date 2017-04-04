@@ -1,0 +1,33 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io"
+    }
+  ],
+  
+  "require": {
+    "php": ">=5.4",
+    "johnpbloch/wordpress": "4.*",
+    "koodimonni-language/nl_nl":"4.*",
+    "wpackagist-plugin/advanced-custom-fields": "*",
+    "wpackagist-plugin/regenerate-thumbnails": "2.*",
+    "wpackagist-plugin/post-type-select-for-advanced-custom-fields": "1.0.0",
+    "wpackagist-plugin/slate-admin-theme": "1.*",
+  },
+  "extra": {
+    "wordpress-install-dir": "wp",
+    "dropin-paths": {
+      "wp-content/languages/": ["vendor:koodimonni-language"],
+      "wp-content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+      "wp-content/languages/themes/": ["vendor:koodimonni-theme-language"]
+    }
+  },
+  "config":{
+    "secure-http":false
+  }
+}
